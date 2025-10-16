@@ -26,14 +26,23 @@ Click Predict to see the probability of default and risk level
 
 📁 File Structure
 Credit-Default-Prediction-Project/
+
 │
+
 ├── data/
+
 │   └── default_of_credit_card_clients.xls      # Dataset
+
 ├── models/
+
 │   ├── rf_credit_model.pkl                     # Saved Random Forest model
+
 │   └── scaler.pkl                              # StandardScaler
+
 ├── train_model.py                              # Script to train and save model
+
 ├── app.py                                      # Streamlit app
+
 └── README.md                                   # Project description
 
 ✅ Example
@@ -41,9 +50,13 @@ Credit-Default-Prediction-Project/
 Streamlit Input Example:
 
 Credit Limit: 50000
+
 Age: 35
+
 PAY_0: -1
+
 BILL_AMT1: 30000
+
 PAY_AMT1: 5000
 ...
 
@@ -51,6 +64,7 @@ PAY_AMT1: 5000
 Output:
 
 Probability of Default: 23%
+
 Risk Level: Low
 
 🧑‍💻 Author
