@@ -1,4 +1,5 @@
 **🏦 AI Credit Default Prediction System**
+
 An end-to-end Python project that predicts credit card default using machine learning.
 Includes data preprocessing, model training, evaluation, and an interactive Streamlit app for users to predict default risk.
 
