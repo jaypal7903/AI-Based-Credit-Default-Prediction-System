@@ -93,7 +93,7 @@ input_data = pd.DataFrame({
     "PAY_AMT4":[PAY_AMT4],
     "PAY_AMT5":[PAY_AMT5],
     "PAY_AMT6":[PAY_AMT6],
-})
+})  
 
 # Scale input
 input_scaled = scaler.transform(input_data)
@@ -102,7 +102,9 @@ input_scaled = scaler.transform(input_data)
 if st.button("Predict Default Probability"):
     prob_default = rf_model.predict_proba(input_scaled)[0][1]
     st.write(f"Predicted Probability of Default: {prob_default:.2f}")
-    if prob_default > 0.5:
+    if prob_default >= 0.66:
         st.warning("⚠️ High risk of default!")
-    else:
+    elif prob_default >=0.33 and prob_default < 0.66:
+        st.info("Modarate risk of default.")
+    else :
         st.success("✅ Low risk of default.")
